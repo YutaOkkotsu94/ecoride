@@ -1,0 +1,258 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Roboto", serif;
+    font-weight: 100;
+    font-style: normal;
+    background-color: #004346;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    position: absolute; 
+    top: 0;
+    width: 100%; 
+    padding: 10px 40px; 
+    background: rgba(0, 0, 0, 0);
+    color: rgb(255, 255, 255);
+    z-index: 100; 
+    border-bottom: 1px solid rgba(33, 33, 33, 0.474);
+  }
+  
+  .logo img {
+    height: 45px; 
+  }
+  
+  
+  .navbar ul {
+    display: flex; 
+    list-style: none; 
+    gap: 40px;
+  }
+  
+  .navbar ul li {
+    font-size: 16px;
+    font-weight: bold;
+    padding-right: 32px;
+  }
+  
+  .navbar ul li a {
+    text-decoration: none; 
+    color: #1C0F13;
+    transition: color 0.3s ease; 
+  }
+  
+  .navbar ul li a:hover {
+    color: #4FB286;
+  }
+  
+  
+  .login-icon a img {
+    height: 20px;
+    width: 20px;
+    margin-left: 20px; 
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .login-icon a img:hover {
+    transform: scale(1.4);
+  }
+  
+  .menu {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+  }
+  
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    color: #F5EDF0;
+    background-image: url('../images/photo-header.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+  }
+  
+  .header h1 {
+    font-size: 42px;
+    font-weight: bolder;
+    margin: 0px;
+    text-align: center;
+    padding-bottom: 80px;
+  }
+  
+  .footer {
+    background-color: #1C0F13; 
+    color: #F5EDF0; 
+    padding: 20px 30px; 
+    border-top: 1px solid #f5edf058;
+  }
+  
+  .footer-container {
+    display: flex; 
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  
+  .logo-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+  }
+  .logo-footer img {
+    max-width: 115px; 
+    height: auto; 
+  }
+  
+  .menu-footer {
+    display: flex; 
+    justify-content: center;
+    list-style: none; 
+    padding: 0;
+    margin: 0;
+  }
+  
+  .menu-footer ul {
+    display: flex; 
+    padding-bottom: 20px; 
+    margin: 0; 
+    list-style: none; 
+    gap: 40px;
+  }
+  
+  .menu-footer li {
+    margin: 0; 
+    padding: 0; 
+  }
+  
+  .menu-footer a {
+    text-decoration: none; 
+    font-size: 18px; 
+    color: #F5EDF0; 
+    transition: color 0.3s ease;
+  }
+  
+  .menu-footer a:hover {
+    color: #b1b1b1; 
+  }
+  
+  .entreprise ul {
+    list-style: none; 
+    text-align: right; 
+  }
+  
+  .entreprise li {
+    margin: 18px 0;
+  }
+  
+  .entreprise a {
+    text-decoration: none; 
+    font-size: 18px;
+    line-height: 1.4; 
+    text-align: justify;
+    color: #F5EDF0;
+    font-weight: lighter;
+    transition: color 0.3s ease;
+  }
+  
+  .entreprise a:hover {
+    color: #F5EDF0; 
+  }
+  
+  .search-bar {
+    display: flex;
+    justify-content: space-between; 
+    gap: 20px; 
+    padding: 20px;
+    background-color: #F5EDF0;
+    border-radius: 5px;
+    align-items: flex-end;
+  }
+  
+  
+  .search-bar section {
+    display: flex;
+    flex-direction: column; 
+  }
+  
+  .search-bar p {
+    font-size: 14px;
+    font-weight: bold;
+    margin: 5px 0;
+    color: #1C0F13;
+  }
+  
+  .search-bar label {
+    font-size: 12px;
+    margin-bottom: 10px; 
+    color: #1C0F13;
+    font-weight: bold;
+  }
+  
+  .search-bar input {
+    padding: 10px;
+    border: 1px solid #F5EDF0;
+    border-radius: 8px;
+    font-size: 14px;
+  }
+  
+  .search-bar input:focus {
+    border-color: #004346;
+    outline: none;
+  }
+  
+  .button button {
+    padding: 10px 8px;
+    background-color: #1C0F13;
+    color: #F5EDF0;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+
+  .Avantages {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+  }
+
+  .Avantages section {
+    padding: 80px;
+  }
+  
+  .Avantages h2,
+  .Avantages h3,
+  .Avantages h4 {
+    margin: 0 0 20px 0;
+    color: #F5EDF0;
+    font-size: 28px;
+    font-weight: lighter;
+    text-shadow: 2px 1px 0px #000000;
+  }
+  
+  .Avantages p {
+    color: #F5EDF0;
+    font-size: 18px;
+    line-height: 1.6; 
+  }
+
+  .Avantages img {
+    width: 100px; 
+    height: auto; 
+    display: block;
+    margin: 0 auto 50px; 
+  }
