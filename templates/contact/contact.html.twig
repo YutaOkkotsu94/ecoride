@@ -1,0 +1,73 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Contact{% endblock %}
+{% block stylesheets %}<link href="{{ asset('css/##') }}" rel="stylesheet"/>{% endblock %}
+
+
+{% block body %}
+<nav class="navbar">
+        <div class="logo">
+          <a href="index.html">
+            <img src={{'images/ecoride.png'}} alt="Ecoride logo">
+        </a>
+        </div>
+        <div class="menu">
+          <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="covoiturage.html">Covoiturages</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+            <div class="login-icon">
+                <a href="#login">
+                  <img src={{'images/login-2.png'}} alt="Login Icon">
+                </a>
+        </div>
+      </nav>
+      <div class="title">
+        <h1> <h1>CONTACTEZ-NOUS !</h1></h1>
+      </div>
+      <div class="contact-container">
+        <form action="mailto:support@ecoride.com" method="post" enctype="text/plain" class="contact-form">
+          <div class="form-group">
+            <label for="name">Nom</label>
+            <input type="text" id="name" name="name" placeholder="Votre nom" required>
+          </div>
+          <div class="form-group">
+            <label for="first-name">Prénom</label>
+            <input type="text" id="first-name" name="first-name" placeholder="Votre Prénom" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Votre email" required>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Votre message" rows="5" required></textarea>
+          </div>
+          <button type="submit">Envoyer</button>
+        </form>
+      </div>
+
+      <footer class="footer">
+        <div class="footer-container">
+          <div class="logo-footer">
+            <a href="index.html">
+              <img src={{'images/ecoride.png'}} alt="Ecoride logo">
+            </a>
+            <div class="menu-footer">
+              <ul>
+                <li><a href="#">Mentions légales</a></li>
+                <li><a href="#">Protection des données</a></li>
+                <li><a href="#">Politique de confidentialité</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="entreprise">
+            <ul>
+              <li><a href="mailto:support@ecoride.com">Support@ecoride.com</a></li>
+              <li><a href="#">Aide et Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+{% endblock %}
