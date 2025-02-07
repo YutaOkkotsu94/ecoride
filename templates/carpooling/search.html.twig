@@ -29,27 +29,27 @@
     <div>  
       <h1>La solution de covoiturage adaptée à vos besoins</h1>
     </div>
-    <form class="search-bar" action={{ path('app_carpooling_list') }} method="get">
+    <form class="search-bar" action={{ path('app_carpooling_list') }} method="POST">
     <div class="search-bar">
       <section class="recherche-1">
         <p>Départ</p>
         <label for="depart">Où ?</label>
-        <input type="text" id="depart" placeholder="Adresse de Départ" value="Paris">
+        <input type="text" name="depart" id="depart" placeholder="Adresse de Départ" value="Paris">
       </section>
       <section class="recherche-2">
         <p>Arrivée</p>
         <label for="arrivee">Où ?</label>
-        <input type="text" id="arrivee" placeholder="Adresse de Destination">
+        <input type="text" name="arrivee"  id="arrivee" placeholder="Adresse de Destination">
       </section>
       <section class="recherche-3">
         <p>Date</p>
         <label for="date">Quand ?</label>
-        <input type="date" id="date">
+        <input type="date" name="date"  id="date">
       </section>
       <section class="recherche-4">
         <p>Passagers</p>
         <label for="passagers">Combien ?</label>
-        <input type="number" id="passagers" placeholder="Nombre de passagers" min="1">
+        <input type="number" name="passagers" id="passagers" placeholder="Nombre de passagers" min="1">
       </section>
       <div class="button">
         <button type="submit">Rechercher</button>
