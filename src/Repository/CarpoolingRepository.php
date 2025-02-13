@@ -41,7 +41,7 @@ class CarpoolingRepository extends ServiceEntityRepository
 //        ;
 //    }
 
-public function findByFilters(?string $depart, ?string $arrivee, ?string $date, ?int $passagers)
+public function findByFilters(?string $depart, ?string $arrivee, ?string $date, int|string $passagers)
 {
     $qb = $this->createQueryBuilder('carpooling');
 

@@ -7,7 +7,7 @@
   <nav class="navbar">
         <div class="logo">
           <a href="index.html">
-            <img src={{'images/ecoride.png'}} alt="Ecorride logo">
+            <img src={{'images/ecoride.png'}} alt="Ecoride logo">
         </a>
         </div>
         <div class="menu">
@@ -54,15 +54,17 @@
             <button type="submit">Rechercher</button>
           </div>
         </div>
-
-{% for carpooling in carpoolings %}
-    <ul>
-            <li>{{ dump(carpooling.id) }}</li>
-            <li>{{ dump(carpooling.placeOfDeparture) }}</li>
-            <li>{{ dump(carpooling.placeOfArrival) }}</li>
-    </ul>
-
-{% endfor %}    
+<div class="carpoolings">
+    {% for carpooling in carpoolings %}
+    <div class="carpooling">
+        <ul>
+                <li>{{ carpooling.id }}</li>
+                <li>{{ carpooling.placeOfDeparture }}</li>
+                <li>{{ carpooling.placeOfArrival }}</li>
+        </ul>
+        </div>
+    {% endfor %}
+</div>    
        
         <footer class="footer">
           <div class="footer-container">
