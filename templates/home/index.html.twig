@@ -1,20 +1,114 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello HomeController!{% endblock %}
+{% block title %}Accueil{% endblock %}
+{% block stylesheets %}<link href="{{ asset('css/home.css') }}" rel="stylesheet"/>{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
-
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
-
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code>C:/xampp/htdocs/my_project/src/Controller/HomeController.php</code></li>
-        <li>Your template at <code>C:/xampp/htdocs/my_project/templates/home/index.html.twig</code></li>
-    </ul>
+  <nav class="navbar">
+    <div class="logo">
+      <a href="{{ path('app_home') }}">
+        <img src="{{ asset('images/ecoride.png') }}" alt="Ecorride logo">
+    </a>
+    </div>
+    <div class="menu">
+        <ul>
+    <li class="{% if app.request.get('_route') == 'app_home' %}active{% endif %}">
+        <a href="{{ path('app_home') }}">Accueil</a>
+    </li>
+     <li class="{% if app.request.get('_route') == 'app_carpooling' %}active{% endif %}">
+        <a href="{{ path('app_carpooling') }}">Covoiturages</a>
+    </li>
+    <li class="{% if app.request.get('_route') == 'app_contact' %}active{% endif %}">
+        <a href="{{ path('app_contact') }}">Contact</a>
+    </li>
+        </ul>
+        <div class="login-icon">
+            <a href="{{ path('app_login') }}">
+              <img src="{{ asset('images/User-1.png') }}" alt="Login Icon">
+            </a>
+    </div>
+    </div>
+  </nav>
+  <header>
+<div class="header">
+  <div class="header-content">
+    <div>  
+      <h1>La solution de covoiturage adaptée à vos besoins</h1>
+    </div>
+    <form class="search-bar" action="/resultats.html" method="get">
+    <div class="search-bar">
+      <section class="recherche-1">
+        <p>Départ</p>
+        <label for="depart">Où ?</label>
+        <input type="text" id="depart" placeholder="Adresse de Départ">
+      </section>
+      <section class="recherche-2">
+        <p>Arrivée</p>
+        <label for="arrivee">Où ?</label>
+        <input type="text" id="arrivee" placeholder="Adresse de Destination">
+      </section>
+      <section class="recherche-3">
+        <p>Date</p>
+        <label for="date">Quand ?</label>
+        <input type="date" id="date">
+      </section>
+      <section class="recherche-4">
+        <p>Passagers</p>
+        <label for="passagers">Combien ?</label>
+        <input type="number" id="passagers" placeholder="Nombre de passagers" min="1">
+      </section>
+      <div class="button">
+        <button type="submit">Rechercher</button>
+      </div>
+    </form>
+    </div>
+ </div>
+  </header>
+  <div class="conteneur-auto">
+    <img src="{{ asset('images/covoiturage-ecolo.jpg') }}" alt="Covoiturage écologique" class="image-gauche">
+    <div class="texte-droite">
+      <h2>LE COVOITURAGE PRATIQUE ET ECOLOGIQUE</h2>
+      <p>EcoRide est la plateforme dédiée aux trajets en 
+        covoiturage, alliant économie et respect de l’environnement. Trouvez ou proposez un trajet en quelques clics, réduisez vos frais de déplacement et votre empreinte carbone. Ensemble, 
+        roulons vers un avenir plus durable et connecté.</p>
+    </div>
+  </div>
+<div class="conteneur-ecologie">
+  <div class="texte-gauche">
+    <h3>DEPLACEZ-VOUS POUR LA PLANETE</h3>
+    <p>Avec EcoRide, voyagez tout en prenant soin de l’environnement. 
+      En partageant vos trajets, vous contribuez à réduire les émissions de CO₂ et à désengorger les routes. Adoptez une solution de transport responsable 
+      et faites un geste concret pour la planète.</p>
 </div>
+<img src="{{ asset('images/ecologique.jpg') }}" alt="Protéger la planete" class="image-droite">
+</div>
+<div class="wrapper">
+  <div class="conteneur-auto">
+  </div>
+  <div class="conteneur-ecologie">
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="footer-container">
+    <div class="logo-footer">
+      <a href="{{ path('app_home') }}">
+        <img src="{{ asset('images/ecoride.png') }}" alt="Ecoride logo">
+      </a>
+      <div class="menu-footer">
+        <ul>
+          <li><a href="#">Mentions légales</a></li>
+          <li><a href="#">Protection des données</a></li>
+          <li><a href="#">Politique de confidentialité</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="entreprise">
+      <ul>
+        <li><a href="mailto:support@ecoride.com">Support@ecoride.com</a></li>
+        <li><a href="#">Aide et Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
 {% endblock %}

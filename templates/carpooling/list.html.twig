@@ -6,25 +6,31 @@
 {% block body %}
   <nav class="navbar">
         <div class="logo">
-          <a href="index.html">
-            <img src={{'images/ecoride.png'}} alt="Ecoride logo">
+          <a href="{{ path('app_home') }}">
+            <img src="{{ asset('images/ecoride.png') }}" alt="Ecoride logo">
         </a>
         </div>
         <div class="menu">
-            <ul>
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="covoiturage.html">Covoiturages</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
+             <ul>
+    <li class="{% if app.request.get('_route') == 'app_home' %}active{% endif %}">
+        <a href="{{ path('app_home') }}">Accueil</a>
+    </li>
+    <li class="{% if app.request.get('_route') == 'app_carpooling' %}active{% endif %}">
+        <a href="{{ path('app_carpooling') }}">Covoiturages</a>
+    </li>
+    <li class="{% if app.request.get('_route') == 'app_contact' %}active{% endif %}">
+        <a href="{{ path('app_contact') }}">Contact</a>
+    </li>
+        </ul>
             <div class="login-icon">
-                <a href="#login">
-                  <img src={{'images/login-2.png'}} alt="Login Icon">
+                <a href="{{ path('app_login') }}">
+                  <img src=" {{ asset ('images/login-2.png') }}" alt="Login Icon">
                 </a>
         </div>
       </nav>
       <header>
         <div class="header-content">
-        <img src={{'images/map.png'}} alt="carte de l'ile de france" class="map-image">
+        <img src="{{ asset('images/map.png')}}" alt="carte de l'ile de france" class="map-image">
     </div>
         </div>
      </div>
@@ -69,8 +75,8 @@
         <footer class="footer">
           <div class="footer-container">
             <div class="logo-footer">
-              <a href="index.html">
-                <img src={{'images/ecoride.png'}} alt="Ecoride logo">
+              <a href="{{ path('app_home') }}">
+                <img src="{{ asset('images/ecoride.png') }}" alt="Ecoride logo">
               </a>
               <div class="menu-footer">
                 <ul>
