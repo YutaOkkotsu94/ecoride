@@ -1,20 +1,64 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello PasswordController!{% endblock %}
+{% block title %}Connexion{% endblock %}
+{% block stylesheets %}<link href="{{ asset('css/password.css') }}" rel="stylesheet"/>{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+<nav class="navbar">
+        <div class="logo">
+          <a href="{{ path('app_home')}}">
+            <img src="{{ asset('images/ecoride.png')}}" alt="Ecoride logo">
+        </a>
+        </div>
+        <div class="menu">
+          <ul>
+    <li class="{% if app.request.get('_route') == 'app_home' %}active{% endif %}">
+        <a href="{{ path('app_home') }}">Accueil</a>
+    </li>
+    <li class="{% if app.request.get('_route') == 'app_carpooling' %}active{% endif %}">
+        <a href="{{ path('app_carpooling') }}">Covoiturages</a>
+    </li>
+    <li class="{% if app.request.get('_route') == 'app_contact' %}active{% endif %}">
+        <a href="{{ path('app_contact') }}">Contact</a>
+    </li>
+        </ul>
+            <div class="login-icon">
+                <a href="{{ path('app_login')}}">
+                  <img src="{{asset('images/login-2.png')}}" alt="Login Icon">
+                </a>
+        </div>
+      </nav>
+      
+      <div class="container">
+        <h1>Mot de passe oublié ?</h1>
+        <p><strong>Entrez votre adresse email ci-dessous et nous vous enverrons un lien pour réinitialiser votre mot de passe :</strong></p>
+    </div>
+        <form class="contact-form" action="#" method="POST"> {# Action pour le formulaire #}
+          <label for="email">Adresse e-mail</label>
+          <input type="email" id="email" name="email" placeholder="Entrez votre adresse e-mail" required></input>
+          <button type="submit">Valider</button>
+        </form>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
-
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code>C:/xampp/htdocs/my_project/src/Controller/PasswordController.php</code></li>
-        <li>Your template at <code>C:/xampp/htdocs/my_project/templates/password/index.html.twig</code></li>
-    </ul>
-</div>
+      <footer class="footer">
+        <div class="footer-container">
+          <div class="logo-footer">
+            <a href="{{path('app_home')}}">
+              <img src="{{ asset('images/ecoride.png')}}" alt="Ecoride logo">
+            </a>
+            <div class="menu-footer"> {# twig links and create pages #}
+              <ul>
+                <li><a href="#">Mentions légales</a></li>
+                <li><a href="#">Protection des données</a></li>
+                <li><a href="#">Politique de confidentialité</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="entreprise">
+            <ul>
+              <li><a href="mailto:lakhdari.fares@outlook.fr">lakhdari.fares@outlook.fr</a></li>
+              <li><a href="#">Aide et Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </footer>
 {% endblock %}
