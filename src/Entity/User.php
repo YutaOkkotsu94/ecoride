@@ -49,8 +49,8 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\Column(type: Types::DATE_MUTABLE)]
     private ?\DateTimeInterface $date_of_birth = null;
 
-    #[ORM\Column(type: Types::BLOB)]
-    private $picture = null;
+    #[ORM\Column(length: 255)]
+    private ?string $picture = null;
 
     #[ORM\Column(length: 255)]
     private ?string $pseudo = null;

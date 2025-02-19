@@ -11,6 +11,7 @@
     </a>
     </div>
     <div class="menu">
+  
         <ul>
     <li class="{% if app.request.get('_route') == 'app_home' %}active{% endif %}">
         <a href="{{ path('app_home') }}">Accueil</a>
@@ -22,11 +23,24 @@
         <a href="{{ path('app_contact') }}">Contact</a>
     </li>
         </ul>
-        <div class="login-icon">
-            <a href="{{ path('app_login') }}">
-              <img src="{{ asset('images/User-1.png') }}" alt="Login Icon">
-            </a>
+
+        {% if app.user %}
+                <p style='color: black'>{{ app.user.pseudo}}</p>
+                        <div class="login-icon">
+                      <a href="{{ path('app_logout') }}">
+                        <img src="{{ asset('images/User-1.png') }}" alt="Login Icon">
+                      </a>
     </div>
+
+                {% else %}
+
+                                        <div class="login-icon">
+                      <a href="{{ path('app_login') }}">
+                        <img src="{{ asset('images/User-1.png') }}" alt="Login Icon">
+                      </a>
+    </div>
+          {% endif %} 
+
     </div>
   </nav>
   <header>
@@ -82,12 +96,7 @@
 </div>
 <img src="{{ asset('images/ecologique.jpg') }}" alt="Protéger la planete" class="image-droite">
 </div>
-<div class="wrapper">
-  <div class="conteneur-auto">
-  </div>
-  <div class="conteneur-ecologie">
-  </div>
-</div>
+
 
 <footer class="footer">
   <div class="footer-container">
