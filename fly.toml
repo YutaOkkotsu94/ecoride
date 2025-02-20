@@ -7,6 +7,8 @@ app = 'my-project-rough-fire-9557'
 primary_region = 'cdg'
 
 [build]
+
+  type = "image"
   dockerfile = "dockerfile"
 
 [http_service]
