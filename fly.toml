@@ -1,9 +1,9 @@
-# fly.toml app configuration file generated for my-project-aged-voice-9196 on 2025-02-20T15:16:17+01:00
+# fly.toml app configuration file generated for my-project-rough-fire-9557 on 2025-02-20T15:28:00+01:00
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = 'my-project-aged-voice-9196'
+app = 'my-project-rough-fire-9557'
 primary_region = 'cdg'
 
 [http_service]
