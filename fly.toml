@@ -1,15 +1,13 @@
-# fly.toml app configuration file generated for my-project-rough-fire-9557 on 2025-02-20T15:28:00+01:00
+# fly.toml app configuration file generated for my-project-autumn-grass-6442 on 2025-02-20T19:48:01+01:00
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = 'my-project-rough-fire-9557'
+app = 'my-project-autumn-grass-6442'
 primary_region = 'cdg'
 
 [build]
-
-  type = "image"
-  dockerfile = "dockerfile"
+  image = 'flyio/hellofly:latest'
 
 [http_service]
   internal_port = 8080
