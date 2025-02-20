@@ -19,7 +19,7 @@ Installation du projet avec symfony
 ```bash
   symfony new my_project --version="7.2.x" --webapp
 ```
-Utilisation du composer pour notre projet symfony 
+Utilisation du composer pour mon projet symfony 
 
 ```bash
 composer create-project symfony/skeleton:"7.2.x" my_project_directory
