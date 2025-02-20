@@ -1,13 +1,10 @@
-# fly.toml app configuration file generated for phpmyadmin-nameless-surf-8070 on 2025-02-20T00:45:39+01:00
+# fly.toml app configuration file generated for my-project-aged-voice-9196 on 2025-02-20T15:16:17+01:00
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = 'phpmyadmin-nameless-surf-8070'
+app = 'my-project-aged-voice-9196'
 primary_region = 'cdg'
-
-[build]
-  image = 'phpmyadmin/phpmyadmin'
 
 [http_service]
   internal_port = 8080
