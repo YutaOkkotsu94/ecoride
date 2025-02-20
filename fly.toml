@@ -6,6 +6,9 @@
 app = 'my-project-rough-fire-9557'
 primary_region = 'cdg'
 
+[build image]
+  dockerfile = "dockerfile"
+
 [http_service]
   internal_port = 8080
   force_https = true
