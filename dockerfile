@@ -21,13 +21,20 @@ COPY . .
 # Installation de Composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
+# 9. Ajuster les permissions pour que l'utilisateur Apache (www-data) puisse accéder aux fichiers
+RUN chown -R www-data:www-data /var/www/html \
+    && chmod -R 755 /var/www/html
+
 # Installation des dépendances Symfony
-RUN composer install --no-dev --optimize-autoloader
+RUN composer install --no-interaction --optimize-autoloader
 
-# Droits sur le dossier var/
-RUN chown -R www-data:www-data var
+# 10. Copier le fichier de configuration Apache personnalisé
+COPY docker/vhost.conf /etc/apache2/sites-available/000-default.conf
 
-# Exposer le port 80
+# 11. (Optionnel) Vous pouvez vérifier la configuration avec apachectl configtest ici si besoin
+
+# 12. Exposer le port 80 pour l'accès HTTP
 EXPOSE 80
 
+# 13. Lancer Apache en mode foreground
 CMD ["apache2-foreground"]
