@@ -1,0 +1,40 @@
+<header>
+<nav class="navbar">
+    <div class="logo">
+        <a href="{{ path('app_home') }}">
+            <img src="{{ asset('images/ecoride.png') }}" alt="Ecorride logo">
+        </a>
+    </div>
+    <div class="menu">
+        <ul>
+            <li class="{% if app.request.get('_route') == 'app_home' %}active{% endif %}">
+                <a href="{{ path('app_home') }}">Accueil</a>
+            </li>
+            <li class="{% if app.request.get('_route') == 'app_carpooling' %}active{% endif %}">
+                <a href="{{ path('app_carpooling') }}">Covoiturages</a>
+            </li>
+            <li class="{% if app.request.get('_route') == 'app_contact' %}active{% endif %}">
+                <a href="{{ path('app_contact') }}">Contact</a>
+            </li>
+        </ul>
+
+        {% if app.user %}
+            <p style='color: black'>{{ app.user.pseudo}}</p>
+            <div class="login-icon">
+                <a href="{{ path('app_logout') }}">
+                    <img src="{{ asset('images/User-1.png') }}" alt="Login Icon">
+                </a>
+            </div>
+
+        {% else %}
+
+            <div class="login-icon">
+                <a href="{{ path('app_login') }}">
+                    <img src="{{ asset('images/User-1.png') }}" alt="Login Icon">
+                </a>
+            </div>
+        {% endif %}
+
+    </div>
+</nav>
+</header>

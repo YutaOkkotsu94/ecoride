@@ -7,3 +7,6 @@
 ###> phpunit/phpunit ###
 phpunit.xml.*
 fly.toml
+vendor*
+var*
+.github*

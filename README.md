@@ -90,6 +90,15 @@ Github : https://docs.github.com/fr
 
 Git : https://git-scm.com/docs/git
 
+
+## Run locally
+
+Pour build une image
+docker build -t mon-image
+
+Pour run l'image dans un conteneur
+docker run -d -p 8080:80 --name mon-conteneur mon-image
+
 ## Authors
 
 Lakhdari Fares - [@YutaOkkotsu94](https://www.github.com/YutaOkkotsu94)

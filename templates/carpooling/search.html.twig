@@ -1,69 +1,19 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}Covoiturages{% endblock %}
-{% block stylesheets %}<link href="{{ asset('css/carpooling.css') }}" rel="stylesheet"/>{% endblock %}
 
 {% block body %}
-   <nav class="navbar">
-    <div class="logo">
-      <a href="{{ path('app_home') }}">
-        <img src="{{ asset('images/ecoride.png') }}" alt="Ecoride logo">
-    </a>
-    </div>
-    <div class="menu">
-       <ul>
-    <li class="{% if app.request.get('_route') == 'app_home' %}active{% endif %}">
-        <a href="{{ path('app_home') }}">Accueil</a>
-    </li>
-    <li class="{% if app.request.get('_route') == 'app_carpooling' %}active{% endif %}">
-        <a href="{{ path('app_carpooling') }}">Covoiturages</a>
-    </li>
-    <li class="{% if app.request.get('_route') == 'app_contact' %}active{% endif %}">
-        <a href="{{ path('app_contact') }}">Contact</a>
-    </li>
-        </ul>
-        <div class="login-icon">
-            <a href="#login">
-              <img src={{ asset('images/User-1.png') }} alt="Login Icon">
-            </a>
-    </div>
-    </div>
-  </nav>
-  <header>
+
+    {% include 'components/header.html.twig' %}
+
 <div class="header">
   <div class="header-content">
     <div>  
       <h1>La solution de covoiturage adaptée à vos besoins</h1>
     </div>
-    <form class="search-bar" action={{ path('app_carpooling') }} method="POST">
-    <div class="search-bar">
-      <section class="recherche-1">
-        <p>Départ</p>
-        <label for="depart">Où ?</label>
-        <input type="text" name="depart" id="depart" placeholder="Adresse de Départ" value="Paris">
-      </section>
-      <section class="recherche-2">
-        <p>Arrivée</p>
-        <label for="arrivee">Où ?</label>
-        <input type="text" name="arrivee"  id="arrivee" placeholder="Adresse de Destination">
-      </section>
-      <section class="recherche-3">
-        <p>Date</p>
-        <label for="date">Quand ?</label>
-        <input type="date" name="date"  id="date">
-      </section>
-      <section class="recherche-4">
-        <p>Passagers</p>
-        <label for="passagers">Combien ?</label>
-        <input type="number" name="passagers" id="passagers" placeholder="Nombre de passagers" min="1">
-      </section>
-      <div class="button">
-        <button type="submit">Rechercher</button>
-      </div>
-    </form>
+      {% include 'components/form_search_carpooling.html.twig' %}
     </div>
  </div>
-  </header>
 
   <div class="Avantages">
     <section class="covoiturage">
@@ -73,39 +23,20 @@
             offrant une expérience optimale pour conducteurs et passagers.</p>
     </section>
     <section class="demarche-eco">
-      <img src={{ asset('images/Plant.png') }} alt="Démarche écologique">
+      <img src={{ asset('images/Plant.png') }} alt="Démarche_écologique">
         <h3>Démarche écologique</h3>
         <p>Pour des trajets respectueux de l’environnement. 
             Réduisez votre empreinte carbone en partageant vos trajets avec EcoRide, 
             une solution qui soutient la planète.</p>
     </section>
     <section class="Simplicité">
-      <img src={{ asset ('images/Checkmark.png')}} alt="Simplicité d'utilisation">
+      <img src={{ asset ('images/Checkmark.png')}} alt="Simplicité_d'utilisation">
         <h4>Simplicité d’utilisation</h4>
         <p>Un covoiturage rapide et facile. L’interface intuitive d'EcoRide vous permet de trouver 
             et proposer des trajets en quelques clics, rapidement et sans effort.</p>
     </section>
   </div>
-<footer class="footer">
-  <div class="footer-container">
-    <div class="logo-footer">
-      <a href="index.html">
-        <img src={{ asset ('images/ecoride.png')}} alt="Ecoride logo">
-      </a>
-      <div class="menu-footer">
-        <ul>
-          <li><a href="#">Mentions légales</a></li>
-          <li><a href="#">Protection des données</a></li>
-          <li><a href="#">Politique de confidentialité</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="entreprise">
-      <ul>
-        <li><a href="mailto:lakhdari.fares@outlook.fr">lakhdari.fares@outlook.fr</a></li>
-        <li><a href="contact.html">Aide et Contact</a></li>
-      </ul>
-    </div>
-  </div>
-</footer>
+
+    {% include 'components/footer.html.twig' %}
+
 {% endblock %}

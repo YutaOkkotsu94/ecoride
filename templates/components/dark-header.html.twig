@@ -1,0 +1,24 @@
+<nav class="navbar-contact">
+    <div class="logo-contact">
+        <a href="{{ path('app_home') }}">
+            <img src="{{asset('images/ecoride.png')}}" alt="Ecoride logo">
+        </a>
+    </div>
+    <div class="menu-contact">
+        <ul>
+            <li class="{% if app.request.get('_route') == 'app_home' %}active{% endif %}">
+                <a href="{{ path('app_home') }}">Accueil</a>
+            </li>
+            <li class="{% if app.request.get('_route') == 'app_carpooling' %}active{% endif %}">
+                <a href="{{ path('app_carpooling') }}">Covoiturages</a>
+            </li>
+            <li class="{% if app.request.get('_route') == 'app_contact' %}active{% endif %}">
+                <a href="{{ path('app_contact') }}">Contact</a>
+            </li>
+        </ul>
+        <div class="login-icon-contact">
+            <a href="#login">
+                <img src="{{asset('images/login-2.png')}}" alt="Login Icon">
+            </a>
+        </div>
+</nav>

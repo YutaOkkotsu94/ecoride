@@ -90,7 +90,7 @@
   }
   
 
-  .contact-container {
+  .contact-container-login {
     width: 32%; 
     margin: auto; 
     background-color: #232021;
@@ -100,20 +100,20 @@
     text-align: center;
   }
   
-  .contact-form {
+  .contact-form-login {
     display: flex;
     flex-direction: column;
     gap: 16px; 
     text-align: left;
   }
   
-  .contact-form label {
+  .contact-form label-login {
     font-size: 18px;
     color: #ffffff; 
   }
   
-  .contact-form input,
-  .contact-form textarea {
+  .contact-form-login input,
+  .contact-form-login textarea {
     width: 100%;
     padding: 12px;
     font-size: 14px;
@@ -124,7 +124,7 @@
     box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.5); 
   }
   
-  .contact-form button {
+  .contact-form-login button {
     width: 100%;
     padding: 10px;
     font-size: 16px;
@@ -137,7 +137,7 @@
     transition: background-color 0.3s;
   }
   
-  .contact-form button:hover {
+  .contact-form-login button:hover {
     background-color: #a9ffcbd1; 
   }
 

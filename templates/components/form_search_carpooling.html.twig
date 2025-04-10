@@ -1,0 +1,28 @@
+
+<form class="search-bar" action={{ path('app_carpooling') }} method="POST">
+    <div class="search-bar">
+        <section class="recherche-1">
+            <p>Départ</p>
+            <label for="depart">Où ?</label>
+            <input type="text" name="depart" id="depart" placeholder="Adresse de Départ" value="Paris">
+        </section>
+        <section class="recherche-2">
+            <p>Arrivée</p>
+            <label for="arrivee">Où ?</label>
+            <input type="text" name="arrivee"  id="arrivee" placeholder="Adresse de Destination">
+        </section>
+        <section class="recherche-3">
+            <p>Date</p>
+            <label for="date">Quand ?</label>
+            <input type="date" name="date"  id="date">
+        </section>
+        <section class="recherche-4">
+            <p>Passagers</p>
+            <label for="passagers">Combien ?</label>
+            <input type="number" name="passagers" id="passagers" placeholder="Nombre de passagers" min="1">
+        </section>
+        <div class="button">
+            <button type="submit">Rechercher</button>
+        </div>
+    </div>
+</form>

@@ -10,60 +10,60 @@
     font-style: normal;
     background-color: #004346;
   }
-  
-  .navbar {
+
+  .navbar-list {
     display: flex;
-    justify-content: space-between; 
+    justify-content: space-between;
     align-items: center;
     top: 0;
-    width: 100%; 
-    padding: 10px 40px; 
-    background: #1C0F13; 
+    width: 100%;
+    padding: 10px 40px;
+    background: #1C0F13;
     color: rgb(255, 255, 255);
     border-bottom: 1px solid rgba(255, 255, 255, 0.662);
   }
-  
-  .logo img {
-    height: 45px; 
+
+  .logo-list img {
+    height: 45px;
   }
-  
- 
-  .navbar ul {
-    display: flex; 
-    list-style: none; 
+
+
+  .navbar-list ul {
+    display: flex;
+    list-style: none;
     gap: 40px;
   }
-  
-  .navbar ul li {
+
+  .navbar-list ul li {
     font-size: 16px;
     font-weight: bold;
     padding-right: 32px;
   }
-  
-  .navbar ul li a {
-    text-decoration: none; 
-    color: #F5EDF0; 
-    transition: color 0.3s ease; 
+
+  .navbar-list ul li a {
+    text-decoration: none;
+    color: #F5EDF0;
+    transition: color 0.3s ease;
   }
 
-  .navbar ul li a:hover {
-    color: #4FB286; 
+  .navbar-list ul li a:hover {
+    color: #4FB286;
   }
-  
- 
-.login-icon a img {
+
+
+.login-icon-list a img {
     height: 20px;
     width: 20px;
     margin-left: 20px;
     cursor: pointer;
     transition: transform 0.3s ease;
   }
-  
-  .login-icon a img:hover {
-    transform: scale(1.4); 
+
+  .login-icon-list a img:hover {
+    transform: scale(1.4);
 }
   
-  .menu {
+  .menu-list {
     display: flex;
     align-items: center;
     gap: 50px;
@@ -252,5 +252,9 @@ button:hover {
 }
 
 .carpoolings, .carpooling {
-  background-color: red;
+  display: flex;
+  flex-direction: column;
+  border-radius: 12px;
+  background-color: #F5EDF0;
+  gap: 8px;
 }
