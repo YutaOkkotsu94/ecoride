@@ -251,10 +251,58 @@ button:hover {
   color: #F5EDF0; 
 }
 
-.carpoolings, .carpooling {
+.carpoolings {
   display: flex;
   flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+
+.carpooling-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
   border-radius: 12px;
   background-color: #F5EDF0;
-  gap: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
 }
+
+.carpooling-card:hover {
+  transform: scale(1.02);
+}
+
+.carpooling-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.carpooling-info h3 {
+  margin: 0;
+  font-size: 1.2em;
+  color: #333;
+}
+
+.carpooling-info p {
+  margin: 0;
+  color: #555;
+  font-size: 0.95em;
+}
+
+.carpooling-btn {
+  background-color: #D9677E;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+}
+
+.carpooling-btn:hover {
+  background-color: #c6556e;
+}
+
