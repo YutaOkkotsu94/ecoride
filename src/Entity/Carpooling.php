@@ -114,9 +114,13 @@ class Carpooling
     }
 
 
-    public function getStatut(): StatutType
+    public function getStatut(): ?StatutType
     {
-        return StatutType::from($this->statut);
+        if ($this->statut instanceof StatutType) {
+            return $this->statut;
+        }
+
+        return $this->statut ? StatutType::tryFrom($this->statut) : null;
     }
 
     public function setStatut(StatutType $statut): self

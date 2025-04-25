@@ -7,7 +7,7 @@
     {% include 'components/dark-header.html.twig' %}
 
         <div class="header-content-list">
-        <img src="{{ asset('images/map.png')}}" alt="carte de l'ile de france" class="map-image">
+        <img src="{{ asset('images/map.png')}}" alt="carte de lIle de france" class="map-image">
     </div>
 
         <div class="filter-container">
@@ -40,71 +40,22 @@
     {% for carpooling in carpoolings %}
         <div class="carpooling-info">
         <ul>
-                <li>{{ carpooling.id }}</li>
-                <li>{{ carpooling.placeOfDeparture }}</li>
-                <li>{{ carpooling.placeOfArrival }}</li>
+            <li>{{ carpooling.placeOfDeparture }}</li>
+            <li>Départ : {{ carpooling.departureDate|date('d/m/Y H:i') }}</li>
+            <li>Arrivée : {{ carpooling.arrivalDate|date('d/m/Y H:i') }}</li>
+            <li>{{ carpooling.numberOfPlace }}</li>
+            <li>{{ carpooling.placeOfArrival }}</li>
+            <li>
+                Statut : {{ carpooling.statut ? carpooling.statut.value : 'Inconnu' }}
+            </li>
+            <li>{{ carpooling.personPrice }} €</li>
         </ul>
         </div>
-    {% endfor %}
         <button class="carpooling-btn">Réserver</button>
     </div>
+    {% endfor %}
 </div>
-    <div class="carpoolings">
-        <div class="carpooling-card">
-            {% for carpooling in carpoolings %}
-                <div class="carpooling-info">
-                    <ul>
-                        <li>{{ carpooling.id }}</li>
-                        <li>{{ carpooling.placeOfDeparture }}</li>
-                        <li>{{ carpooling.placeOfArrival }}</li>
-                    </ul>
-                </div>
-            {% endfor %}
-            <button class="carpooling-btn">Réserver</button>
-        </div>
-    </div>
-    <div class="carpoolings">
-        <div class="carpooling-card">
-            {% for carpooling in carpoolings %}
-                <div class="carpooling-info">
-                    <ul>
-                        <li>{{ carpooling.id }}</li>
-                        <li>{{ carpooling.placeOfDeparture }}</li>
-                        <li>{{ carpooling.placeOfArrival }}</li>
-                    </ul>
-                </div>
-            {% endfor %}
-            <button class="carpooling-btn">Réserver</button>
-        </div>
-    </div>
-    <div class="carpoolings">
-        <div class="carpooling-card">
-            {% for carpooling in carpoolings %}
-                <div class="carpooling-info">
-                    <ul>
-                        <li>{{ carpooling.id }}</li>
-                        <li>{{ carpooling.placeOfDeparture }}</li>
-                        <li>{{ carpooling.placeOfArrival }}</li>
-                    </ul>
-                </div>
-            {% endfor %}
-            <button class="carpooling-btn">Réserver</button>
-        </div>
-    </div>
-    <div class="carpoolings">
-        <div class="carpooling-card">
-            {% for carpooling in carpoolings %}
-                <div class="carpooling-info">
-                    <ul>
-                        <li>{{ carpooling.id }}</li>
-                        <li>{{ carpooling.placeOfDeparture }}</li>
-                        <li>{{ carpooling.placeOfArrival }}</li>
-                    </ul>
-                </div>
-            {% endfor %}
-            <button class="carpooling-btn">Réserver</button>
-        </div>
-    </div>
+
 
     {% include 'components/footer.html.twig' %}
 

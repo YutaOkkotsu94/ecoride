@@ -170,7 +170,7 @@
   }
 
 button:hover {
-  background-color: #a9ffcbd1; 
+  background-color: rgba(169, 251, 203, 0.82);
 }
 
 .footer {
@@ -292,7 +292,7 @@ button:hover {
 }
 
 .carpooling-btn {
-  background-color: #D9677E;
+  background-color: rgb(4, 4, 4);
   color: white;
   border: none;
   padding: 10px 16px;
@@ -303,6 +303,6 @@ button:hover {
 }
 
 .carpooling-btn:hover {
-  background-color: #c6556e;
+  background-color: rgba(120, 251, 178, 0.82);
 }
 
